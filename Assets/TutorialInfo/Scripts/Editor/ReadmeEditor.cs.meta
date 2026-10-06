@@ -13,7 +13,7 @@ MonoImporter:
 AssetOrigin:
   serializedVersion: 1
   productId: 196526
-  packageName: First Person + Third Person | Character Controllers
-  packageVersion: 2.0.1
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0
   assetPath: Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs
-  uploadId: 998422
+  uploadId: 988808
