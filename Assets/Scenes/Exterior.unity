@@ -184,7 +184,8 @@ PrefabInstance:
       value: Houses02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3083486521819115358, guid: fc2c52dcef20e1e449878a7dd307207b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc2c52dcef20e1e449878a7dd307207b, type: 3}
