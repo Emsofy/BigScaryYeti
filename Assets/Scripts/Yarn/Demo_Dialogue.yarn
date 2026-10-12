@@ -8,12 +8,8 @@ title:loadPhase
     <<jump Start>>
 <<elseif $dialogPhase == "quest_taken">>
     <<jump Quest_Taken>>
-    <<if $hasTrophy == true>>
-        <<jump Has_Trophy>>
-        <<endif>>
 <<endif>>
 ===
-
 title: Start
 ---
 <<set $visitedYet to true>>
@@ -45,22 +41,11 @@ Town Elder: The people, they’re afraid to sleep, y’know.
                 Town Elder: Be careful; they can be real unpredictable. 
                 <<dialogPhaseGetter NPC quest_taken>>
                 <<cam_move NPC_Cam_Rig "return">>
-===
 
+===
 title: Quest_Taken
+position: 42,46
 ---
 Town Elder: Just mosey up on the mountain there. You'll find a cave near by the village.
 Town Elder: That's where all that noise has been coming from.
-===
-
-title: Has_Trophy
----
-Town Elder: How'd it go? I heard howling so loud!
-    -> I don't have any heads to give you... But I wont this trophy...
-    ->(Hand the elder the trophy)
-Town Elder: What...?
-    -> Don’t worry, they have all gone home for the night. The people can rest easy. 
-Town Elder: Thank you, kind adventurer! We are beyond grateful.
-    -> It's SNOW problem.
-
 ===

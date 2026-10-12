@@ -1,12 +1,12 @@
 ﻿title: caveLoad
 ---
 <<declare $meterValue = 0>>
-<<declare $stage = 0>>
-<<declare $hasTrophy = false>>
+<<declare $stage=0>>
 ===
 
 title: checkScore
 ---
+// This checks if the player accumulated 8 or more points
 <<if $meterValue >= 8>>
     <<jump successDialogue>>
 <<else>>
@@ -52,7 +52,6 @@ title: Joke1
 ---
 -> What steps should you take if you see a dangerous Yeti?
     -> Very large ones!
-        <<show_image excited>>
         <<set $meterValue += 3>>
         Heckler 2: HAHA! Humans are just so weak and little.
             -> We aren't that tiny…
@@ -63,14 +62,12 @@ title: Joke1
                 <<jump Joke2>>
 -> How do Yetis tell the time?
     -> With a sasq-watch.
-        <<show_image normal>>
         <<set $meterValue += 1>>
         Heckler 3: I'm so sick of them comparing us to Big Foot.
         Heckler 4: My feet are a very normal size, thank you very much!
             -> You're right it was a stretch…
                 <<jump Joke2>>
 -> I'm going to kill you. Then I'm going to take your heads back to the other humans.
-    <<show_image pissed>>
     Heckler 2: Okay, Pipsqueak.
         -> aw, man...
             <<jump Joke2>>
@@ -81,28 +78,23 @@ title: Joke2
 ---
 -> What do you call a yeti with a six pack?
     Heckler 1: ME!
-    <<show_image excited>>
         -> It's not your turn YETi, bucko.
             <<set $meterValue += 1>>
-            <<show_image pissed>>
             Heckler 1: You're just jealous... Fight me, and I'll show you!
                 -> Uhh... is there security in here?
                     <<jump Joke3>>
         -> Have you looked at your reflection in the ice lately...?
-            <<show_image pissed>>
             <<set $meterValue += 2>>
             Heckler 1: Hey! It's just under all the fur...
                 -> Yeah... right...
                     <<jump Joke3>>
         -> Someone's had snow much to drink...
-            <<show_image pissed>>
             <<set $meterValue += 1>>
             Heckler 2: Get this guy out of here! I wanna hear the show!
             Heckler 1: alRigHT! ImMa GoiNG!
                 -> Can I get what he's having?
                     <<jump Joke3>>
 -> So... airplane food...
-    <<show_image normal>>
     Heckler 3: What's an airplane?
         <<jump Joke3>>
 ===
@@ -113,9 +105,7 @@ title: Joke3
 -> Snowbody parties like a yeti! AM I RIGHT?!
     <<set $meterValue += 2>>
     <<jump Joke4>>
-    <<show_image excited>>
 -> You in the white, what's your name?
-    <<show_image normal>>
     Heckler 2: Bongo.
         -> What do you do for work, Bongo?
             Bongo: I'm a yeti...?
@@ -138,25 +128,21 @@ title: Joke4
 ---
 -> I’m going to be real for a second. Ya’ll have been real loud and its disturbing the villagers. Could we all just call it a fun night and go home?
     <<set $meterValue += 2>>
-    <<show_image excited>>
     Heckler 3: MAN THIS GUY'S HILARIOUS!
         -> Oh... no I'm being serious...
             <<set $meterValue -= 2>>
-            <<show_image normal>>
             Heckler 3: ...
             <<jump checkScore>>
         -> Haha yeah thank you!
             <<jump checkScore>>
 -> Why don't Yetis get married? Because they always get cold feet!
     <<set $meterValue += 1>>
-    <<show_image pissed>>
     Heckler 3: Stereotypes aren't funny, they're just offensive.
     Bongo: Who do you think you are?
         -> I'm so sorry...
             <<jump checkScore>>
 -> I tried to convince my friend I saw a snow monster today... Yeti still didn't believe me!
     <<set $meterValue += 3>>
-    <<show_image excited>>
     Heckler 4: HAHHAHAHHAHA!
     Heckler 3: It's funny because humans are just so dumb!
         -> Oh um.. that's not-
@@ -170,7 +156,6 @@ title: failDialogue
 ---
 -> How do Yetis communicate?
     -> With fronty signals!
-        <<show_image pissed>>
         Heckler 4: Are you making fun of the way we sound...?
         Heckler 3: English isn't our first language.
             -> What language do you speak?
@@ -178,32 +163,23 @@ title: failDialogue
                     Heckler 4: Oh...
 -> What's a Yeti's favorite type of music?
     -> Snow and roll!
-        <<show_image normal>>
         Heckler 4: A friend of mine was snowed and rolled once...
         Heckler 3: He was just a giant snowball... and then he was gone.
 -> What's a yeti's favorite game?
     -> Freeze tag!
-        <<show_image normal>>
         Heckler 3: We lost hundreds to freeze tag.
             -> How do you die in freeze tag?
                 Heckler 3: They froze... never to be tagged back in.
 
-<<show_image normal>>
 Crickets: chirp, chirp, chirp.
-<<show_image pissed>>
 Heckler 4: That was really offensive...
 Heckler 2: How dare you say such a thing?!
 Heckler 3: Get out of here!!
     -> You're just a bunch of snowflakes!
-    <<change_scene Exterior>>
 ===
 
 
 title: successDialogue
 ---
-Heckler 4 & 3: HAHAHAHAHahahaHAHAhaHAhaahAHAAHAAA!
-Announcer: We have our winner, folks, of our 4th Annual Ice Box Comedy Competition!
-Announcer: Here's. Your. TROPHY!!!!
-<<set $hasTrophy = true>>
-<<change_scene Exterior>>
+
 ===
