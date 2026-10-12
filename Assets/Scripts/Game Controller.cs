@@ -1,9 +1,10 @@
-using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Linq;
 using StarterAssets;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 public class GameController : MonoBehaviour
 {
@@ -27,13 +28,13 @@ public class GameController : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(this);
 
             //this line uses the `sceneLoaded` UnityAction
             //we subscribe the OnSceneLoaded method to this action, which "fires" whenever a new scene is loaded
             SceneManager.sceneLoaded += OnSceneLoaded;
             //Debug.Log("Loaded Scene: " + SceneManager.GetActiveScene());
         }
+        DontDestroyOnLoad(this);
 
     }
 
@@ -97,6 +98,11 @@ public class GameController : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = movePos.position;
+    }
+    [YarnCommand("change_scene")]
+    public static void LoadNewScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
 

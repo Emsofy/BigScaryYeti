@@ -2,6 +2,7 @@
 ---
 <<declare $meterValue = 0>>
 <<declare $stage=0>>
+<<declare $hasTrophy=false>>
 ===
 
 title: checkScore
@@ -176,10 +177,15 @@ Heckler 4: That was really offensive...
 Heckler 2: How dare you say such a thing?!
 Heckler 3: Get out of here!!
     -> You're just a bunch of snowflakes!
+     <<change_scene Exterior>>
 ===
 
 
 title: successDialogue
 ---
-
+Heckler 4 & 3: HAHAHAHAHahahaHAHAhaHAhaahAHAAHAAA!
+Announcer: We have our winner, folks, of our 4th Annual Ice Box Comedy Competition!
+Announcer: Here's. Your. TROPHY!!!!
+<<set $hasTrophy = true>>
+<<change_scene Exterior>>
 ===
