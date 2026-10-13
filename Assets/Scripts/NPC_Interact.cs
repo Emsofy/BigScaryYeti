@@ -102,6 +102,10 @@ public class NPC_Interact : MonoBehaviour
         {
             npcData.currentPhase = NPC_Data.dialogPhase.has_trophy;
         }
+        if(phase == "no_trophy")
+        {
+            npcData.currentPhase = NPC_Data.dialogPhase.no_trophy;
+        }
     }
     [YarnCommand("check_bool")]
     public void CheckBool()
@@ -111,6 +115,10 @@ public class NPC_Interact : MonoBehaviour
        {
         getYarnPhase("has_trophy");
 
+       }
+       if(GameController.instance.fail)
+       {
+            getYarnPhase("no_trophy");
        }
         else
         {
