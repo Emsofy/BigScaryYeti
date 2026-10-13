@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 672738522}
   - component: {fileID: 672738521}
   m_Layer: 0
-  m_Name: Game Controller
+  m_Name: Game_Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
