@@ -8,7 +8,7 @@
 title: checkScore
 ---
 // This checks if the player accumulated 8 or more points
-<<if $meterValue >= 8>>
+<<if $meterValue >= 6>>
     <<jump successDialogue>>
 <<else>>
     <<jump failDialogue>>
@@ -18,7 +18,7 @@ title: checkScore
 title: YStart
 ---
 <<set $stage = 0>>
-//<<set_crowd_img>>
+<<show_image normal>>
 Murmurs of yetis: Woahh they got a human...Who is this guy…. I paid for this guy?…
 Heckler 1: If you're not going to make a joke, get off the stage, Buddy!!
 Heckler 2: I paid COLD hard cash for this!
