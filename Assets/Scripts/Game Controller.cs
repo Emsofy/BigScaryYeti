@@ -18,7 +18,6 @@ public class GameController : MonoBehaviour
     public bool firstSceneloaded = false;
     public GameObject ThirdPersonRig;
     public bool hTrophy = false;
-    public bool fail = false;
 
     public void Awake()
     {
@@ -128,7 +127,6 @@ public class GameController : MonoBehaviour
         if (answ == "no")
         {
             hTrophy = false;
-            fail = true;
             Debug.Log(hTrophy);
         }
     }

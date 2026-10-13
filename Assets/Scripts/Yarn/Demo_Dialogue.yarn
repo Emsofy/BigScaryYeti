@@ -14,8 +14,6 @@ title:loadPhase
 //     <<endif>>
 <<elseif $dialogPhase == "has_trophy">>
     <<jump Has_Trophy>>
-<<elseif $dialogPhase == "no_trophy">>
-    <<jump No_Trophy>>
 <<endif>>
 ===
 title: Start
@@ -26,6 +24,8 @@ Town Elder: Finally, you're here! We have been waiting for our savior!
     <<cam_move NPC_Cam_Rig "pc">>
     -> Yes, sir, how can I be of service?
     -> I'm here to do my best
+    -> I dont talk to strange men
+        <<cam_move NPC_Cam_Rig "return">>
 <<cam_move NPC_Cam_Rig "npc">>
 Town Elder: You see, we have been hearing the echoes of howling Yetis from the mountains.
 Town Elder: No one has been able to venture outside of the village out of fear. They keep us awake ‘til dark hours.
@@ -65,16 +65,4 @@ Town Elder: What...?
 Town Elder: Thank you, kind adventurer! We are beyond grateful.
     -> It's SNOW problem.
 
-===
-title: No_Trophy
----
-Town Elder: How'd it go? I heard howling so loud!
-    ->It was awful! It's a comedy club full of yetis!! I was almost eaten alive!
-        Town Elder: Comedy club?? I sent you to kill the beast not show them a good time!
-        Town Elder: If you wanted laughs so bad you should tell better jokes than that. Comedy club...wow 
-        Town Elder: Leave this town! I'll get someone better *scoff*
-    ->Those yetis have no sense of humor, good luck I'm out of here! 
-        Town Elder: Semse of humor? I sent you to kill them not make friends!!
-        Town Elder: Fine, shoo I'll get someone more competent then you to kill them.
-    //send to end scene
 ===
