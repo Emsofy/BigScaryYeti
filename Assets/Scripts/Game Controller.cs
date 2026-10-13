@@ -19,7 +19,11 @@ public class GameController : MonoBehaviour
     public GameObject ThirdPersonRig;
     public bool hTrophy = false;
     public bool fail = false;
-
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void Awake()
     {
         if (instance != null && instance != this)
@@ -36,7 +40,8 @@ public class GameController : MonoBehaviour
             //Debug.Log("Loaded Scene: " + SceneManager.GetActiveScene());
         }
         DontDestroyOnLoad(this);
-
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     //this method receives the `sceneLoaded` UnityAction and requires the Scene and LoadSceneMode arguments

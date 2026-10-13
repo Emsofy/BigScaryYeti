@@ -8,7 +8,7 @@ title: caveLoad
 title: checkScore
 ---
 // This checks if the player accumulated 8 or more points
-<<if $meterValue >= 6>>
+<<if $meterValue >= 7>>
     <<jump successDialogue>>
 <<else>>
     <<jump failDialogue>>
@@ -21,12 +21,6 @@ title: YStart
 <<show_image normal>>
 Murmurs of yetis: Woahh they got a human...Who is this guy…. I paid for this guy?…
  <<show_image pissed>>
-Heckler 1: If you're not going to make a joke, get off the stage, Buddy!!
-Heckler 2: I paid COLD hard cash for this!
-Heckler 3: This is why humans shouldn't be comedians. 
- <<show_image normal>>
-
-<<show_image pissed>>
 Heckler 1: If you're not going to make a joke, get off the stage, Buddy!!
 Heckler 2: I paid COLD hard cash for this!
 Heckler 3: This is why humans shouldn't be comedians. 
@@ -45,10 +39,6 @@ Heckler 3: This is why humans shouldn't be comedians.
        <<show_image normal>>
         Heckler 1: Who do this guy thinks they are? We ain't scared of you! HAHA!
             -> You should be scared of the amount you drank tonight…
-             <<show_image pissed>>
-        <<show_image excited>>
-        Heckler 1: Who do this guy thinks they are? We ain't scared of you! HAHA!
-            -> You should be scared of the amount you drank tonight…
                 <<show_image pissed>>
                 Heckler 3: Are you gonna tell a joke or what?
                 <<jump Joke1>>
@@ -64,6 +54,7 @@ Heckler 3: This is why humans shouldn't be comedians.
 
 title: Joke1
 ---
+...
 -> What steps should you take if you see a dangerous Yeti?
     -> Very large ones!
      <<show_image excited>>
@@ -93,6 +84,7 @@ title: Joke1
 
 title: Joke2
 ---
+...
  <<show_image normal>>
 -> What do you call a yeti with a six pack?
     Heckler 1: ME!
@@ -124,17 +116,13 @@ title: Joke2
 
 title: Joke3
 ---
+...
 -> Snowbody parties like a yeti! AM I RIGHT?!
     <<show_image excited>>
     <<set $meterValue += 2>>
     <<jump Joke4>>
 -> You in the white, what's your name?
     <<show_image normal>>
-<<show_image excited>>
-    <<set $meterValue += 2>>
-    <<jump Joke4>>
--> You in the white, what's your name?
-<<show_image normal>>
     Heckler 2: Bongo.
         -> What do you do for work, Bongo?
             Bongo: I'm a yeti...?
@@ -155,6 +143,7 @@ title: Joke3
 
 title: Joke4
 ---
+...
 -> I’m going to be real for a second. Ya’ll have been real loud and its disturbing the villagers. Could we all just call it a fun night and go home?
      <<show_image excited>>
     <<set $meterValue += 2>>
@@ -167,9 +156,9 @@ title: Joke4
         -> Haha yeah thank you!
             <<jump checkScore>>
 -> Why don't Yetis get married? Because they always get cold feet! 
-     <<show_image pissed>>
     <<set $meterValue += 1>>
     Heckler 3: Stereotypes aren't funny, they're just offensive.
+     <<show_image pissed>>
     Bongo: Who do you think you are?
         -> I'm so sorry...
             <<jump checkScore>>
@@ -187,6 +176,7 @@ title: Joke4
 
 title: failDialogue
 ---
+...
 -> How do Yetis communicate?
     -> With fronty signals!
          <<show_image pissed>>
@@ -220,9 +210,11 @@ Heckler 3: Get out of here!!
 
 title: successDialogue
 ---
+...
 <<set_bool Game_Controller "yes">>
 <<show_image excited>>
 Heckler 4 & 3: HAHAHAHAHahahaHAHAhaHAhaahAHAAHAAA!
+Announcer: Wow I've never heard this club so loud! That's a wrap on tonight!
 Announcer: We have our winner, folks, of our 4th Annual Ice Box Comedy Competition!
 Announcer: Here's. Your. TROPHY!!!!
 <<set $hasTrophy = true>>
