@@ -1,4 +1,3 @@
-﻿
 title:loadPhase
 ---
 <<declare $dialogPhase= "">>
@@ -9,9 +8,6 @@ title:loadPhase
     <<jump Start>>
 <<elseif $dialogPhase == "quest_taken">>
     <<jump Quest_Taken>>
-// <<if $hasTrophy == true>>
-//     <<jump Has_Trophy>>
-//     <<endif>>
 <<elseif $dialogPhase == "has_trophy">>
     <<jump Has_Trophy>>
 <<elseif $dialogPhase == "no_trophy">>
@@ -64,8 +60,10 @@ Town Elder: What...?
     -> Don’t worry, they have all gone home for the night. The people can rest easy. 
 Town Elder: Thank you, kind adventurer! We are beyond grateful.
     -> It's SNOW problem.
+    <<change_scene Success>>
 
 ===
+
 title: No_Trophy
 ---
 Town Elder: How'd it go? I heard howling so loud!
@@ -76,5 +74,5 @@ Town Elder: How'd it go? I heard howling so loud!
     ->Those yetis have no sense of humor, good luck I'm out of here! 
         Town Elder: Semse of humor? I sent you to kill them not make friends!!
         Town Elder: Fine, shoo I'll get someone more competent then you to kill them.
-    //send to end scene
+            <<change_scene Fail>>
 ===

@@ -4,7 +4,7 @@ using Yarn.Unity;
 
 public class DialogueArtworkManager : MonoBehaviour
 {
- 
+
     private static DialogueArtworkManager instance;
 
     [Header("UI Reference")]
@@ -22,11 +22,11 @@ public class DialogueArtworkManager : MonoBehaviour
 
     private void Awake()
     {
-     
+
         instance = this;
     }
 
-    
+
     [YarnCommand("show_image")]
     public static void SwapDialogueImage(string targetName)
     {

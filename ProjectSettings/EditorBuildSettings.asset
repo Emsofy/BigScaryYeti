@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YetiCave.unity
     guid: 4f33a01e142eaa84f994b58e4fdc459d
+  - enabled: 1
+    path: Assets/Scenes/Fail.unity
+    guid: 8c0d67fe4b7946b49a7f0618dac4571f
+  - enabled: 1
+    path: Assets/Scenes/Sucess.unity
+    guid: d24efb7cf85a8e0468ec62496d1a5b61
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
