@@ -3,14 +3,15 @@ title:loadPhase
 ---
 <<declare $dialogPhase= "">>
 <<declare $visitedYet = false>>
+<<check_bool NPC>>
 <<dialogPhaseSetter NPC>>
 <<if $dialogPhase == "start">>
     <<jump Start>>
 <<elseif $dialogPhase == "quest_taken">>
     <<jump Quest_Taken>>
-    <<if $hasTrophy == true>>
-        <<jump Has_Trophy>>
-        <<endif>>
+// <<if $hasTrophy == true>>
+//     <<jump Has_Trophy>>
+//     <<endif>>
 <<elseif $dialogPhase == "has_trophy">>
     <<jump Has_Trophy>>
 <<endif>>

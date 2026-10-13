@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     public Quaternion loadRot;
     public bool firstSceneloaded = false;
     public GameObject ThirdPersonRig;
-
+    public bool hTrophy = false;
 
     public void Awake()
     {
@@ -104,5 +104,32 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    //[YarnCommand("has_trophy")]
+    //public void setTrophyBool(bool hTrophy)
+    //{
+    //    if (hTrophy)
+    //    {
+    //        Debug.Log("has trophy");
+    //    }
+    //    if(!hTrophy)
+    //    {
+    //        Debug.Log("no trophy");
+    //    }
+    //}
+    [YarnCommand("set_bool")]
+    public void SetBool(string answ)
+    {
+       if (answ == "yes")
+       {
+            hTrophy = true;
+            Debug.Log(hTrophy);
+       }
+        if (answ == "no")
+        {
+            hTrophy = false;
+            Debug.Log(hTrophy);
+        }
+    }
+    
 }
 
