@@ -3,7 +3,6 @@
 <<declare $meterValue = 0>>
 <<declare $stage=0>>
 <<declare $hasTrophy=false>>
-<<declare $failure = false>>
 ===
 
 title: checkScore
@@ -275,7 +274,6 @@ Heckler 2: How dare you say such a thing?!
 Heckler 3: Get out of here!!
     -> You're just a bunch of snowflakes!
      <<change_scene Exterior>>
-     <<set $failure = true>>
 ===
 
 
