@@ -61,6 +61,7 @@ Town Elder: What...?
     -> Don’t worry, they have all gone home for the night. The people can rest easy. 
 Town Elder: Thank you, kind adventurer! We are beyond grateful.
     -> It's SNOW problem.
+    <<change_scene Success>>
 
 
 ===
@@ -75,6 +76,6 @@ Town Elder: How'd it go? I heard howling so loud!
     ->Those yetis have no sense of humor, good luck I'm out of here! 
         Town Elder: Semse of humor? I sent you to kill them not make friends!!
         Town Elder: Fine, shoo I'll get someone more competent then you to kill them.
-            //<<change_scene Fail>>
+            <<change_scene Fail>>
 
 ===
