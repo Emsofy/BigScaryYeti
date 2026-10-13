@@ -11,6 +11,9 @@ title:loadPhase
     <<if $hasTrophy == true>>
         <<jump Has_Trophy>>
         <<endif>>
+    <<if $failed == true>>
+        <<jump failed>>
+        <<endif>>
 <<elseif $dialogPhase == "has_trophy">>
     <<jump Has_Trophy>>
 <<endif>>
@@ -63,5 +66,15 @@ Town Elder: What...?
     -> Don’t worry, they have all gone home for the night. The people can rest easy. 
 Town Elder: Thank you, kind adventurer! We are beyond grateful.
     -> It's SNOW problem.
+    <<change_scene Success>>
 
+===
+
+title: failed
+---
+Town Elder: What happened in there?!
+    -> They were beyond vicious.
+        It sure sounded like it from here!
+            ->I'm sorry, Town Elder. I have failed you. 
+            <<change_scene Failure>>
 ===

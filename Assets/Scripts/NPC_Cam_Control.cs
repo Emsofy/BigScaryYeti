@@ -22,15 +22,16 @@ public class NPC_Cam_Control : MonoBehaviour
     public void cam_move(string focus)
     {
         npc_cCam.Priority = pValue;
-        if(focus == "npc")
+        if (focus == "npc")
         {
             npc_cCam.gameObject.transform.position = npc_loc.position;
         }
-        else if(focus == "pc")
+        else if (focus == "pc")
         {
             npc_cCam.gameObject.transform.position = pc_loc.position;
+            movePlayer();
         }
-        else if(focus == "return")
+        else if (focus == "return")
         {
             npc_cCam.Priority = 0;
         }

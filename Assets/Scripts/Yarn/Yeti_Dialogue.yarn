@@ -3,12 +3,13 @@
 <<declare $meterValue = 0>>
 <<declare $stage=0>>
 <<declare $hasTrophy=false>>
+<declare $failed = false>>
 ===
 
 title: checkScore
 ---
 // This checks if the player accumulated 8 or more points
-<<if $meterValue >= 8>>
+<<if $meterValue >= 6>>
     <<jump successDialogue>>
 <<else>>
     <<jump failDialogue>>
@@ -178,6 +179,7 @@ Heckler 2: How dare you say such a thing?!
 Heckler 3: Get out of here!!
     -> You're just a bunch of snowflakes!
      <<change_scene Exterior>>
+     <<set $failed = true>>
 ===
 
 
