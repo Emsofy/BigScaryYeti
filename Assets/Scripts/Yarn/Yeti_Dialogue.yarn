@@ -20,13 +20,15 @@ title: YStart
 <<set $stage = 0>>
 <<show_image normal>>
 Murmurs of yetis: Woahh they got a human...Who is this guy…. I paid for this guy?…
+ <<show_image pissed>>
 Heckler 1: If you're not going to make a joke, get off the stage, Buddy!!
 Heckler 2: I paid COLD hard cash for this!
 Heckler 3: This is why humans shouldn't be comedians. 
+ <<show_image normal>>
     -> I'm here to slay all you wretched beasts!
         <<set $meterValue += 1>>
         <<set $stage = 0>>
-        <<set_crowd_img>>
+         <<show_image pissed>>
         Heckler 3: I'd like to see you try, Tiny!
             -> This sword has penetrated the FROZEN hearts of many!
                 Heckler 3: Are you gonna tell a joke or what?
@@ -34,14 +36,15 @@ Heckler 3: This is why humans shouldn't be comedians.
     -> What's a yeti's biggest fear? Me!
         <<set $meterValue += 2>>
         <<set $stage = 1>>
-        <<set_crowd_img>>
+       <<show_image normal>>
         Heckler 1: Who do this guy thinks they are? We ain't scared of you! HAHA!
             -> You should be scared of the amount you drank tonight…
+             <<show_image pissed>>
                 Heckler 3: Are you gonna tell a joke or what?
                 <<jump Joke1>>
     -> Um….What do you call uh… um…
         <<set $stage = 2>>
-        <<set_crowd_img>>
+        <<show_image normal>>
         Heckler 2: …
         Heckler 3: Are you gonna tell a joke or what?
         <<jump Joke1>>
@@ -53,6 +56,7 @@ title: Joke1
 ---
 -> What steps should you take if you see a dangerous Yeti?
     -> Very large ones!
+     <<show_image excited>>
         <<set $meterValue += 3>>
         Heckler 2: HAHA! Humans are just so weak and little.
             -> We aren't that tiny…
@@ -63,12 +67,14 @@ title: Joke1
                 <<jump Joke2>>
 -> How do Yetis tell the time?
     -> With a sasq-watch.
+     <<show_image pissed>>
         <<set $meterValue += 1>>
         Heckler 3: I'm so sick of them comparing us to Big Foot.
         Heckler 4: My feet are a very normal size, thank you very much!
             -> You're right it was a stretch…
                 <<jump Joke2>>
 -> I'm going to kill you. Then I'm going to take your heads back to the other humans.
+ <<show_image normal>>
     Heckler 2: Okay, Pipsqueak.
         -> aw, man...
             <<jump Joke2>>
@@ -77,25 +83,30 @@ title: Joke1
 
 title: Joke2
 ---
+ <<show_image normal>>
 -> What do you call a yeti with a six pack?
     Heckler 1: ME!
         -> It's not your turn YETi, bucko.
+         <<show_image pissed>>
             <<set $meterValue += 1>>
             Heckler 1: You're just jealous... Fight me, and I'll show you!
                 -> Uhh... is there security in here?
                     <<jump Joke3>>
         -> Have you looked at your reflection in the ice lately...?
+         <<show_image pissed>>
             <<set $meterValue += 2>>
             Heckler 1: Hey! It's just under all the fur...
                 -> Yeah... right...
                     <<jump Joke3>>
         -> Someone's had snow much to drink...
+         <<show_image pissed>>
             <<set $meterValue += 1>>
             Heckler 2: Get this guy out of here! I wanna hear the show!
             Heckler 1: alRigHT! ImMa GoiNG!
                 -> Can I get what he's having?
                     <<jump Joke3>>
 -> So... airplane food...
+ <<show_image normal>>
     Heckler 3: What's an airplane?
         <<jump Joke3>>
 ===
@@ -104,9 +115,11 @@ title: Joke2
 title: Joke3
 ---
 -> Snowbody parties like a yeti! AM I RIGHT?!
+    <<show_image excited>>
     <<set $meterValue += 2>>
     <<jump Joke4>>
 -> You in the white, what's your name?
+    <<show_image normal>>
     Heckler 2: Bongo.
         -> What do you do for work, Bongo?
             Bongo: I'm a yeti...?
@@ -128,21 +141,25 @@ title: Joke3
 title: Joke4
 ---
 -> I’m going to be real for a second. Ya’ll have been real loud and its disturbing the villagers. Could we all just call it a fun night and go home?
+     <<show_image excited>>
     <<set $meterValue += 2>>
     Heckler 3: MAN THIS GUY'S HILARIOUS!
         -> Oh... no I'm being serious...
+             <<show_image normal>>
             <<set $meterValue -= 2>>
             Heckler 3: ...
             <<jump checkScore>>
         -> Haha yeah thank you!
             <<jump checkScore>>
--> Why don't Yetis get married? Because they always get cold feet!
+-> Why don't Yetis get married? Because they always get cold feet! 
+     <<show_image pissed>>
     <<set $meterValue += 1>>
     Heckler 3: Stereotypes aren't funny, they're just offensive.
     Bongo: Who do you think you are?
         -> I'm so sorry...
             <<jump checkScore>>
 -> I tried to convince my friend I saw a snow monster today... Yeti still didn't believe me!
+     <<show_image excited>>
     <<set $meterValue += 3>>
     Heckler 4: HAHHAHAHHAHA!
     Heckler 3: It's funny because humans are just so dumb!
@@ -157,6 +174,7 @@ title: failDialogue
 ---
 -> How do Yetis communicate?
     -> With fronty signals!
+         <<show_image pissed>>
         Heckler 4: Are you making fun of the way we sound...?
         Heckler 3: English isn't our first language.
             -> What language do you speak?
@@ -164,16 +182,19 @@ title: failDialogue
                     Heckler 4: Oh...
 -> What's a Yeti's favorite type of music?
     -> Snow and roll!
+         <<show_image pissed>>
         Heckler 4: A friend of mine was snowed and rolled once...
         Heckler 3: He was just a giant snowball... and then he was gone.
 -> What's a yeti's favorite game?
     -> Freeze tag!
+         <<show_image pissed>>
         Heckler 3: We lost hundreds to freeze tag.
             -> How do you die in freeze tag?
                 Heckler 3: They froze... never to be tagged back in.
-
+ <<show_image normal>>
 Crickets: chirp, chirp, chirp.
 Heckler 4: That was really offensive...
+ <<show_image pissed>>
 Heckler 2: How dare you say such a thing?!
 Heckler 3: Get out of here!!
     -> You're just a bunch of snowflakes!
@@ -183,6 +204,7 @@ Heckler 3: Get out of here!!
 
 title: successDialogue
 ---
+ <<show_image excited>>
 Heckler 4 & 3: HAHAHAHAHahahaHAHAhaHAhaahAHAAHAAA!
 Announcer: We have our winner, folks, of our 4th Annual Ice Box Comedy Competition!
 Announcer: Here's. Your. TROPHY!!!!
