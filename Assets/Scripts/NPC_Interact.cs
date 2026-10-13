@@ -21,6 +21,7 @@ public class NPC_Interact : MonoBehaviour
     public NPC_Cam_Control camController;
     public NPC_Data npcData;
 
+
     public void Start()
     {
         //this behavior is a bit `static` compared to previous system design techniques
@@ -66,6 +67,7 @@ public class NPC_Interact : MonoBehaviour
             }
         }
     }
+
     //this is the set of the current phase of our Yarn Spinner dialog pulled from our npcData variable
     [YarnCommand("dialogPhaseSetter")]
     public void setYarnPhase()
@@ -95,6 +97,32 @@ public class NPC_Interact : MonoBehaviour
         {
             npcData.currentPhase = NPC_Data.dialogPhase.quest_complete_return;
 
+        }
+        if(phase == "has_trophy")
+        {
+            npcData.currentPhase = NPC_Data.dialogPhase.has_trophy;
+        }
+        if (phase == "no_trophy")
+        {
+            npcData.currentPhase = NPC_Data.dialogPhase.no_trophy;
+        }
+    }
+    [YarnCommand("check_bool")]
+    public void CheckBool()
+    {
+        Debug.Log("hTrophy is: " + GameController.instance.hTrophy);
+       if(GameController.instance.hTrophy)
+       {
+        getYarnPhase("has_trophy");
+
+       }
+        if (GameController.instance.fail)
+        {
+            getYarnPhase("no_trophy");
+        }
+        else
+        {
+            return;
         }
     }
     public void OnApplicationQuit()

@@ -1,4 +1,4 @@
-﻿title: caveLoad
+title: caveLoad
 ---
 <<declare $meterValue = 0>>
 <<declare $stage=0>>
@@ -25,6 +25,12 @@ Heckler 1: If you're not going to make a joke, get off the stage, Buddy!!
 Heckler 2: I paid COLD hard cash for this!
 Heckler 3: This is why humans shouldn't be comedians. 
  <<show_image normal>>
+
+<<show_image pissed>>
+Heckler 1: If you're not going to make a joke, get off the stage, Buddy!!
+Heckler 2: I paid COLD hard cash for this!
+Heckler 3: This is why humans shouldn't be comedians. 
+<<show_image normal>>
     -> I'm here to slay all you wretched beasts!
         <<set $meterValue += 1>>
         <<set $stage = 0>>
@@ -40,6 +46,10 @@ Heckler 3: This is why humans shouldn't be comedians.
         Heckler 1: Who do this guy thinks they are? We ain't scared of you! HAHA!
             -> You should be scared of the amount you drank tonight…
              <<show_image pissed>>
+        <<show_image excited>>
+        Heckler 1: Who do this guy thinks they are? We ain't scared of you! HAHA!
+            -> You should be scared of the amount you drank tonight…
+                <<show_image pissed>>
                 Heckler 3: Are you gonna tell a joke or what?
                 <<jump Joke1>>
     -> Um….What do you call uh… um…
@@ -120,6 +130,11 @@ title: Joke3
     <<jump Joke4>>
 -> You in the white, what's your name?
     <<show_image normal>>
+<<show_image excited>>
+    <<set $meterValue += 2>>
+    <<jump Joke4>>
+-> You in the white, what's your name?
+<<show_image normal>>
     Heckler 2: Bongo.
         -> What do you do for work, Bongo?
             Bongo: I'm a yeti...?
@@ -204,7 +219,8 @@ Heckler 3: Get out of here!!
 
 title: successDialogue
 ---
- <<show_image excited>>
+<<set_bool Game_Controller "yes">>
+<<show_image excited>>
 Heckler 4 & 3: HAHAHAHAHahahaHAHAhaHAhaahAHAAHAAA!
 Announcer: We have our winner, folks, of our 4th Annual Ice Box Comedy Competition!
 Announcer: Here's. Your. TROPHY!!!!
