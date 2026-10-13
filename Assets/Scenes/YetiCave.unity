@@ -119,11 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1 &34193070
-=======
---- !u!1 &150845650
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,37 +127,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 34193074}
   - component: {fileID: 34193073}
   - component: {fileID: 34193072}
   - component: {fileID: 34193071}
   m_Layer: 0
   m_Name: Cube (3)
-=======
-  - component: {fileID: 150845653}
-  - component: {fileID: 150845652}
-  - component: {fileID: 150845651}
-  m_Layer: 5
-  m_Name: CrowdImg
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!65 &34193071
 BoxCollider:
-=======
---- !u!114 &150845651
-MonoBehaviour:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 34193070}
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -179,39 +161,10 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &34193072
 MeshRenderer:
-=======
-  m_GameObject: {fileID: 150845650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7af7b6a21dee74d4aa8910a2cd67ccfa, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &150845652
-CanvasRenderer:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 34193070}
   m_Enabled: 0
   m_CastShadows: 1
@@ -257,17 +210,10 @@ CanvasRenderer:
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &34193073
 MeshFilter:
-=======
-  m_GameObject: {fileID: 150845650}
-  m_CullTransparentMesh: 1
---- !u!224 &150845653
-RectTransform:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 34193070}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &34193074
@@ -285,21 +231,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
-=======
-  m_GameObject: {fileID: 150845650}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 19.110968, y: 13.480622, z: 10.882}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 797754020}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 114}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> Stashed changes
 --- !u!1 &208539057
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,11 +1143,7 @@ PrefabInstance:
       addedObject: {fileID: 1382091688}
     - targetCorrespondingSourceObject: {fileID: 2355361765340444347, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
-<<<<<<< Updated upstream
       addedObject: {fileID: 407041512}
-=======
-      addedObject: {fileID: 150845653}
->>>>>>> Stashed changes
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
@@ -1258,24 +1185,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6122f382d0bb7d544ba8dc7e613e4883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueArtworkManager
-<<<<<<< Updated upstream
   uiImageDisplay: {fileID: 407041513}
   artworkLibrary:
   - imageName: excited
     imageSprite: {fileID: 21300000, guid: 44e8eca929c279741a600f4e48ae2951, type: 3}
-=======
-  uiImageDisplay: {fileID: 150845651}
-  artworkLibrary:
->>>>>>> Stashed changes
   - imageName: normal
     imageSprite: {fileID: 21300000, guid: 7af7b6a21dee74d4aa8910a2cd67ccfa, type: 3}
   - imageName: pissed
     imageSprite: {fileID: 21300000, guid: f56d1ff3fe80ba347adf590ad7ad0485, type: 3}
-<<<<<<< Updated upstream
-=======
-  - imageName: excited
-    imageSprite: {fileID: 21300000, guid: 44e8eca929c279741a600f4e48ae2951, type: 3}
->>>>>>> Stashed changes
 --- !u!1 &832636242
 GameObject:
   m_ObjectHideFlags: 0
