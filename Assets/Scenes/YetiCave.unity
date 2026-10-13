@@ -342,7 +342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &281484699
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2482,6 +2482,8 @@ MonoBehaviour:
   loadRot: {x: 0, y: 0, z: 0, w: 0}
   firstSceneloaded: 0
   ThirdPersonRig: {fileID: 8047161636021232021, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
+  hTrophy: 0
+  fail: 0
 --- !u!4 &1049085798
 Transform:
   m_ObjectHideFlags: 0
