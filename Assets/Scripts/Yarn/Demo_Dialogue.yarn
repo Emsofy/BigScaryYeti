@@ -73,6 +73,7 @@ Town Elder: How'd it go? I heard howling so loud!
         Town Elder: Comedy club?? I sent you to kill the beast not show them a good time!
         Town Elder: If you wanted laughs so bad you should tell better jokes than that. Comedy club...wow 
         Town Elder: Leave this town! I'll get someone better *scoff*
+            <<change_scene Fail>>
     ->Those yetis have no sense of humor, good luck I'm out of here! 
         Town Elder: Semse of humor? I sent you to kill them not make friends!!
         Town Elder: Fine, shoo I'll get someone more competent then you to kill them.
