@@ -210,6 +210,7 @@ title: failDialogue
 Crickets: chirp, chirp, chirp.
 Heckler 4: That was really offensive...
  <<show_image pissed>>
+ <<set_bool Game_Controller "no">>
 Heckler 2: How dare you say such a thing?!
 Heckler 3: Get out of here!!
     -> You're just a bunch of snowflakes!
